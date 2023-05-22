@@ -1,0 +1,87 @@
+@media (max-width: 676px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header_nav{
+        display: none;
+    }
+    .hamb{
+        display: flex;
+        align-items: center;
+    }
+    .hamb_field{
+        padding: 20px 30px;
+        cursor: pointer;
+    }
+    .bar{
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: #fff;
+        transition: 0.2s;
+    }
+    .popup{
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+    }
+
+    .popup.open{
+        left: 0;
+    }
+
+    .popup #menu{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        /*color: #000000;*/
+    }
+    .popup a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding:0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+    }
+    .btn{
+        margin-bottom: 50px;
+        width: 80%;
+    }
+
+    .popup a:hover{
+        cursor: pointer;
+        font-size: 30px;
+    }
+    .hamb_field.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamb_field.active .bar:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+    .hamb_field.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    body.noscroll {
+        overflow: hidden;
+    }
+
+
+
+
+}
